@@ -21,21 +21,27 @@ calcForm.addEventListener('submit', function (e) {
    let secondNumber = parseInt(e.target[2].value);
    // already defined operation and result container outside of the form
 
-   // // one strategy is to use a combination of if/else statements (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
-   // if (operation.value === 'add') {
-   //    calculatorResult = firstNumber + secondNumber;
-   // } else {
-   //    calculatorResult = 0;
-   // }
-
-   // // another strategy is to use a switch statement (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
-   // switch (operation.value) {
-   //    case 'add':
-   //       calculatorResult = firstNumber + secondNumber;
-   //       break;
-   //    default:
-   //       calculatorResult = 0;
-   // }
+   // another strategy is to use a switch statement (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
+   switch (operation.value) {
+      case 'add':
+         calculatorResult = firstNumber + secondNumber;
+         break;
+      case 'subtract':
+         calculatorResult = firstNumber - secondNumber;
+         break;
+      case 'multiply':
+         calculatorResult = firstNumber * secondNumber;
+         break;
+      case 'divide':
+         calculatorResult = firstNumber / secondNumber;
+         break;
+      case 'partymode':
+         document.body.classList = 'partymode';
+         calculatorResult = 'party!';
+         break;
+      default:
+         calculatorResult = 0;
+   }
 
    result.value = calculatorResult;
 });
