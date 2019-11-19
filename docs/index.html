@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>JavaScript Calculator</title>
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="shortcut icon" href="favicon.ico">
+   <link rel="shortcut icon" href="favicon.png">
+</head>
+<body>
+   
+   <div class="wrapper">
+
+      <form id="calculator__form">
+         <input type="number1" requried>
+         <select name="operation" id="operation__select" required>
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">&times;</option>
+            <option value="divide">&divide;</option>
+            <!-- Add your own operation here! -->
+         </select>
+         <input type="number2" requried>
+         <button>=</button>
+         <input type="number" id="operation__result" disabled>
+      </form>
+
+   </div>
+
+   <script src="js/script.js"></script>
+</body>
+</html>

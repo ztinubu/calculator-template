@@ -1,0 +1,84 @@
+/* 
+   :: GLOBAL
+   :: TYPOGRAPHY
+   :: NAVIGATION
+*/
+
+html {
+   background: #000;
+   height: 100%;
+}
+
+body {
+   align-items: center;
+   background: #fff;
+   display: flex;
+   font-family: 'Karla', sans-serif;
+   justify-content: center;
+   min-height: 100%;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   @media (min-width: 40em) {
+      margin: 0 auto;
+      width: 30vw;
+   }
+}
+
+form {
+   padding: 1rem 0;
+}
+
+select {
+   line-height: 1;
+}
+
+.partymode {
+  animation: partymode 1.5s linear infinite alternate;
+  -webkit-animation: partymode 1.5s linear infinite alternate;
+}
+
+@keyframes partymode {
+  0% {
+    background: red;
+  }
+  20% {
+    background: orange;
+  }
+  40% {
+   background: yellow;
+  }
+  60% {
+   background: green;
+  }
+  80% {
+   background: blue;
+  }
+  100% {
+   background: indigo;
+  }
+}
+
+@-webkit-keyframes partymode {
+  0% {
+    background: red;
+  }
+  20% {
+    background: orange;
+  }
+  40% {
+   background: yellow;
+  }
+  60% {
+   background: green;
+  }
+  80% {
+   background: blue;
+  }
+  100% {
+   background: indigo;
+  }
+}
