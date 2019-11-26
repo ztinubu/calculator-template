@@ -5,33 +5,124 @@
 */
 
 html {
-   background: #000;
+   /*background: #000;*/
    height: 100%;
+   font-size: 30px;
 }
 
 body {
    align-items: center;
-   background: #fff;
+  /* background: #fff;*/
    display: flex;
-   font-family: 'Karla', sans-serif;
+   font-family: 'Rubik', sans-serif;
    justify-content: center;
    min-height: 100%;
 }
 
 .wrapper {
+   background-color: black;
    display: flex;
    flex-direction: column;
    text-align: center;
+   opacity: .5;
    @media (min-width: 40em) {
       margin: 0 auto;
       width: 30vw;
    }
 }
+.wrapper:hover {
+   opacity: 1;
+   transition-duration: 2s;
+   transition-property: opacity;
+   transition-timing-function: ease-in-out;
+}
 
 form {
    padding: 1rem 0;
+   background-color: black;
+
 }
+input {
+   margin: 1rem;
+   background-color: black;
+   color: white;
+   outline: none;
+
+}
+/*.operation_select{
+   background-color: black;
+   color: white;
+}*/
 
 .stop-playing {
-   animation: 
+  animation: partymode 1.5s linear infinite alternate;
+  -webkit-animation: partymode 1.5s linear infinite alternate;
 }
+
+@keyframes partymode {
+  0% {
+    background: red;
+  }
+  30% {
+    background: orange;
+  }
+  20% {
+   background: yellow;
+  }
+  80% {
+   background: green;
+  }
+  70% {
+   background: blue;
+  }
+  100% {
+   background: indigo;
+  }
+}
+
+@-webkit-keyframes partymode {
+  100% {
+    background: red;
+  }
+  50% {
+    background: orange;
+  }
+  30% {
+   background: yellow;
+  }
+  70% {
+   background: green;
+  }
+  10% {
+   background: blue;
+  }
+  35% {
+   background: indigo;
+  }
+}
+button {
+   color: red;
+   background-color: red;
+  }
+  .stop-playing {
+   animation: flash 1.5s linear infinite alternate;
+   -webkit-animation: flash 1.5s linear infinite alternate;
+  }
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.flash {
+  animation-name: flash;
+}
+  }

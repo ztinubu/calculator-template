@@ -61,7 +61,8 @@ calcForm.addEventListener('submit', function (e) {
          break;
       case 'stop-playing':
          document.body.classList = 'stop-playing';
-         calculatorResult = 'stop!';
+         calculatorResult = 'STOP!';
+         break;
       default:
          calculatorResult = 0;
    }
